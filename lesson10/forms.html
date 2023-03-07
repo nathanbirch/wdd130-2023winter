@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Forms Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function sayHello (event) {
+            // target[0].value
+            alert('Hi, ' + event.target[0].value + ' ' + event.target[1].value + '!');
+            let firstName = document.getElementById('firstName').value;
+            alert(firstName);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Week 10 Forms Practice</h1>
+    <form action="" onsubmit="sayHello(event)">
+        <h2>User Name</h2>
+        <label>First Name:</label>
+        <input type="text" id="firstName">
+        <label>Last Name:</label>
+        <input type="text">
+
+        <h2>User Information</h2>
+        <h3>User Age</h3>
+        <label for="">Child</label>
+        <input type="radio" name="age" value="child">
+        <br>
+        <label for="">Teenager</label>
+        <input type="radio" name="age" value="teenager">
+        <br>
+        <label for="">Adult</label>
+        <input type="radio" name="age" value="adult">
+        <h3>Birthday</h3>
+        <label for="">Please enter your birthday (mm/dd/yy): </label>
+        <input type="text">
+        <h3>Sensitive Information</h3>
+        <label for="">Social Security Number: </label>
+        <input type="text">
+        <h3>Other Information</h3>
+        <label for="">You will subscribe and you will love it.</label>
+        <input type="checkbox" checked disabled="disabled">
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
